@@ -150,6 +150,52 @@ article section.tags .tabcontent {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+article section.categories{
+	width: 100%;
+	background-color: #f2fbfc;
+	padding: 50px 0;
+	margin: 50px 0;
+}
+article section.categories div{
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+article section.categories div img{
+	width: 50%;
+	max-width: 485px;
+}
+article section.categories div ul{
+	width: 50%;
+	height: max-content;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap:20px;
+}
+article section.categories div ul li{
+	height: 80px;
+	position: relative;
+	margin-top: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 2px 9px 0px rgba(0,0,0,.03);
+	list-style: none;
+}
+article section.categories div ul li a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	color: #000;
+}
+article section.categories div ul li a:hover{
+	color: #0fc3da;
+}
 article section.our_doctors{
 	width: 100%;
 	max-width: 1440px;
@@ -298,7 +344,11 @@ footer .block ul li a{
 footer .block ul li a:hover{
 	color: var(--main);
 }
-footer .block a.phone{
+footer .block a.contact{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
 	color: #fff;
 	font-size: 18px;
 	font-weight: 800;
