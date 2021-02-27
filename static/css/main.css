@@ -40,7 +40,8 @@ header .logo{
 	max-width: 80px;
 }
 header .menu{
-	columns: 6;
+	display: flex;
+	gap: 20px;
 	list-style-type: none;
 }
 header .menu a{
