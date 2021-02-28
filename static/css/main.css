@@ -1,3 +1,9 @@
+:root {
+    --black: #2D3663;
+    --gray: #EDF3F6;
+    --main: #0fc3da;
+    --min-font-size:16px; 
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -16,17 +22,13 @@ p, h1, h2, h3, h4, h5, h6, a, li, span {
 }
 h3{
 	font-size: 36px;
+	line-height: 36px;
 	color: var(--black);
 	text-align: center;
 	margin: 42px 0;
 	font-weight: 800;
 }
-:root {
-    --black: #2D3663;
-    --gray: #EDF3F6;
-    --main: #0fc3da;
-    --min-font-size:16px; 
-}
+
 header{
 	width: 100%;
 	max-width: 1440px;
@@ -44,13 +46,56 @@ header .menu{
 	gap: 20px;
 	list-style-type: none;
 }
-header .menu a{
-	color: #2d3663;
+header .menu a,
+header .menu span{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	color: var(--black);
 	padding: 0 10px;
 	font-weight: 700;
+    transition: 0.3s;
 }
-header .menu a:hover{
-	color: var(--main);
+header .menu span .arrow_down {
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--black);
+}
+header .menu .overlay {
+    height: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.4s; 
+}
+header .menu .overlay div a{
+    color: #fff;
+    font-size: 36px;
+    margin-top: 25px;
+}
+header .menu .overlay a.closebtn{
+	color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 60px;
+}
+header .menu a:hover,
+header .menu span:hover{
+	color:var(--main)!important;
+}
+header .menu span:hover .arrow_down{
+	border-top-color: var(--main);
 }
 
 article .main{
@@ -101,12 +146,12 @@ article section.tags .tab_list button {
 	text-transform: uppercase;
     cursor: pointer;
     transition: all .2s ease-in-out;
-	border-bottom: 2px solid #0fc3da;
+	border-bottom: 2px solid var(--main);
 }
 
 article section.tags .tab_list button.active {
     color: #fff;
-	background: #0fc3da;
+	background: var(--main);
 }
 
 article section.tags .tabcontent{
@@ -121,7 +166,7 @@ article section.tags .tabcontent .conteiner{
 
 article section.tags .tabcontent h4{
 	font-weight: 700;
-	color: #0fc3da;
+	color: var(--main);
 	font-size: 20px;
 	margin: 42px 0 16px;
 }
@@ -190,11 +235,12 @@ article section.categories div ul li a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	font-size: 15px;
 	color: #000;
 }
 article section.categories div ul li a:hover{
-	color: #0fc3da;
+	color: var(--main);
 }
 article section.our_doctors{
 	width: 100%;
@@ -261,7 +307,7 @@ article section.our_doctors .doctors .doctor_cart ul{
 }
 article section.our_doctors .doctors .doctor_cart .degree{
 	font-size: 14px;
-	color: #0fc3da;
+	color: var(--main);
 	margin: 10px 0 0 10px;
 }
 article section.our_doctors .doctors .doctor_cart .info{
@@ -271,7 +317,7 @@ article section.our_doctors .doctors .doctor_cart .info{
 	padding: 20px 0 20px;
 }
 article section.our_doctors .doctors .doctor_cart .info div{
-	border: 1px solid #0fc3da;
+	border: 1px solid var(--main);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -279,11 +325,11 @@ article section.our_doctors .doctors .doctor_cart .info div{
 	font-weight: 800;
 }
 article section.our_doctors .doctors .doctor_cart .info .experience{
-	color: #0fc3da;
+	color: var(--main);
 	padding: 12px;
 }
 article section.our_doctors .doctors .doctor_cart .info .price{
-	background: #0fc3da;
+	background: var(--main);
 	padding: 12px 5px;
 	color: #fff;
 }
@@ -331,19 +377,36 @@ footer .block ul li{
 	align-items: center;
 	margin-bottom: 5px;
 	min-width: max-content;
-	
 }
 footer .block ul.footer_menu li{
 	margin: 0 30px 10px 0;
+	position: relative;
+}
+footer .block ul.footer_menu li span{
+    width: 8px;
+    height: 2px;
+	background: var(--main);
+    position: absolute;
+}
+footer .block ul.footer_menu li span.arrow_top{
+	transform: rotate(45deg);
+	transform-origin: bottom right;
+}
+footer .block ul.footer_menu li span.arrow_bottom{
+	transform: rotate(-45deg);
+	transform-origin: top right;
 }
 footer .block ul li a{
 	color: #fff;
 	font-size: 15px;
 	font-weight: 800;
+	margin-left: 15px;
 }
 footer .block ul li a:hover{
 	color: var(--main);
 }
+
+
 footer .block a.contact{
 	display: flex;
 	align-items: center;
@@ -353,7 +416,7 @@ footer .block a.contact{
 	font-size: 18px;
 	font-weight: 800;
 }
-footer .block ul:not(.footer_menu) li img{
+footer .block ul li img{
 	margin-right: 5px;
 }
 footer .bottom_footer{
