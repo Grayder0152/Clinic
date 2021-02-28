@@ -28,7 +28,6 @@ h3{
 	margin: 42px 0;
 	font-weight: 800;
 }
-
 header{
 	width: 100%;
 	max-width: 1440px;
@@ -38,8 +37,37 @@ header{
 	margin: 0 auto;
 	padding:20px 50px;
 }
+header div:first-child{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 header .logo{
 	max-width: 80px;
+}
+header .burger_menu {
+    display: none;
+    cursor: pointer;
+}
+
+header .bar1, .bar2, .bar3 {
+	display: block;
+    width: 35px;
+    height: 5px;
+    background-color: var(--black);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+header .active .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+header .active .bar2 {opacity: 0;}
+
+header .active .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 header .menu{
 	display: flex;
@@ -52,6 +80,7 @@ header .menu span{
 	align-items: center;
 	justify-content: center;
 	gap: 8px;
+	cursor: pointer;
 	color: var(--black);
 	padding: 0 10px;
 	font-weight: 700;
@@ -435,4 +464,29 @@ footer .bottom_footer div{
 footer .bottom_footer p{
 	text-align: center;
 	font-size: 12px;
+}
+
+
+@media screen and (max-width:1280px){
+	header{
+		flex-flow: column;
+		padding:20px 50px 5px;
+
+	}
+	header div:first-child {
+	    width: 100%;
+	}
+	header .menu{
+		opacity: 0;
+		height: 0;
+		flex-flow: column;
+		transition: 0.5s;
+	}
+	header .show_menu{
+		height: 260px;
+		opacity: 1;
+	}
+	header .burger_menu{
+		display: inline-block;
+	}
 }

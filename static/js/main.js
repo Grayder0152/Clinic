@@ -37,3 +37,7 @@ function openNav(id) {
 function closeNav(id) {
     document.getElementById(id).style.height = "0";
 } 
+function burger(el){
+    el.classList.toggle('active');
+    document.getElementById('menu').classList.toggle('show_menu');
+}

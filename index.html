@@ -2,19 +2,25 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="static/css/main.css">
 	<title>Noname</title>
 </head>
 <body>
 	<header>
-		<a href="#"><img src="static/images/logo.png" class="logo"></a>
-		<ul class="menu">
-
+		<div>
+			<a href="#"><img src="static/images/logo.png" class="logo"></a>
+			<div class="burger_menu" onclick="burger(this)">
+				<span class="bar1"></span>
+				<span class="bar2"></span>
+				<span class="bar3"></span>
+			</div>
+		</div>
+		<ul class="menu" id="menu">
 			<li>
 				<span onclick="openNav('list_1')">Напрямки лікування<div class="arrow_down"></div></span>
 				<div id="list_1" class="overlay">
 				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_1')">&times;</a>
-
 				  <div>
 				    <a href="#">Any_page</a>
 				    <a href="#">Any_page</a>
