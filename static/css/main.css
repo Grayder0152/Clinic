@@ -164,7 +164,6 @@ article section.tags .tab_list {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 3px;
-    border: 1px solid #ccc;
    	list-style-type: none;
 }
 
@@ -279,8 +278,9 @@ article section.our_doctors{
 article section.our_doctors .doctors{
 	display: flex;
 	justify-content: center;
+	flex-flow: wrap;
 	gap:30px;
-
+	padding: 0 30px;
 }
 article section.our_doctors .doctors .doctor_cart{
 	width: min-content;
@@ -381,10 +381,12 @@ footer .block{
 	width: 100%;
 	max-width: 1440px;
 	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
 	gap:50px;
 	margin: 0 auto;
 	color: #fff;
-	padding: 35px 20px;
+	padding: 35px 50px;
 }
 footer .block h2{
 	color: var(--main);
@@ -457,9 +459,11 @@ footer .bottom_footer div{
 	max-width: 1440px;
 	display: flex;
 	justify-content: space-between;
+	flex-flow: wrap;
+	gap: 30px;
 	margin: 0 auto;
 	color: #fff;
-	padding: 35px 20px;
+	padding: 35px 50px;
 }
 footer .bottom_footer p{
 	text-align: center;
@@ -488,5 +492,26 @@ footer .bottom_footer p{
 	}
 	header .burger_menu{
 		display: inline-block;
+	}
+	article section.tags .tab_list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	article section.tags .tabcontent .conteiner {
+	    flex-flow: column;
+	    align-items: center;
+	    padding: 20px;
+	}
+	article section.categories div {
+	    align-items: center;
+	    flex-flow: column;
+	}
+	article section.categories div ul {
+    	width: 90%;
+	}
+	article section.categories div img {
+	    display: none;
+	}
+	footer .block{
+		padding: 35px 100px;
 	}
 }
