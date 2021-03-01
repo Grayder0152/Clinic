@@ -511,7 +511,19 @@ footer .bottom_footer p{
 	article section.categories div img {
 	    display: none;
 	}
-	footer .block{
-		padding: 35px 100px;
+}
+@media screen and (max-width:1280px){
+	header{
+		padding: 20px 30px 5px;
+	}
+	article section.tags .tab_list{
+    	grid-template-columns: 1fr;
+	}
+	article section.tags .tabcontent img {
+	    width: 100%;
+	}
+	article section.categories div ul {
+	    grid-template-columns: 1fr;
+	    gap: 15px;
 	}
 }
