@@ -138,6 +138,7 @@ article .main{
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
+	padding: 0 20px;
 }
 article .main:before{
 	content: '';
@@ -370,6 +371,21 @@ article section.our_doctors .doctors .doctor_cart .info span{
 	text-align: left;
 	padding-left: 9px;
 }
+article #top_btn{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main);
+	position: fixed;
+	right: 20px;
+	bottom: -50px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
 
 footer{
 	width: 100%;
@@ -512,7 +528,7 @@ footer .bottom_footer p{
 	    display: none;
 	}
 }
-@media screen and (max-width:1280px){
+@media screen and (max-width:720px){
 	header{
 		padding: 20px 30px 5px;
 	}
@@ -525,5 +541,8 @@ footer .bottom_footer p{
 	article section.categories div ul {
 	    grid-template-columns: 1fr;
 	    gap: 15px;
+	}
+	footer .block ul.footer_menu {
+    	columns: 1;
 	}
 }

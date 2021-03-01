@@ -41,3 +41,22 @@ function burger(el){
     el.classList.toggle('active');
     document.getElementById('menu').classList.toggle('show_menu');
 }
+// if(document.body.scrollTop > 100){
+//     document.getElementById('menu')
+// }
+// window.onscroll = function() {
+
+// }
+// if(document.body.scrollTop > 100){
+//     document.getElementById('top_btn').style.display = 'flex';
+// }
+window.addEventListener('scroll', function() {
+    if(pageYOffset > 300){
+        document.getElementById('top_btn').style.bottom = '20px';
+        document.getElementById('top_btn').style.opacity = '1';
+    }
+    else{
+        document.getElementById('top_btn').style.bottom = '-50px';
+        document.getElementById('top_btn').style.opacity = '0';
+    }
+});
