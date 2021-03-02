@@ -7,7 +7,7 @@
 	<title>Clinic</title>
 </head>
 <body>
-	<header id="head">
+	<header id="head" class="wrapper">
 		<div>
 			<a href="#"><img src="static/images/logo.png" class="logo"></a>
 			<div class="burger_menu" onclick="burger(this)">
@@ -50,29 +50,29 @@
 			<li><a href="#">Симптоми та діагнози</a></li>			
 			<li><a href="#Doctors">Лікарі</a></li>
 			<li><a href="#">Контакти</a></li>
-			<li><a href="#">Відгуки</a></li>
+			<li><a href="#Reviews">Відгуки</a></li>
 		</ul>
 	</header>
 	<article>
 		<div class="main">
 			<h1>Ендоваскулярна хірургія</h1>
 		</div>
-		<section class="tags">
+		<section class="tags wrapper">
 			<ul class="tab_list">
 			  <li>
-			  	<button class="tablinks" id="default_open" onclick="openCity(event, 'tag_1')">Ендоваскулярна хірургія</button>
+			  	<button class="tablinks" id="default_open" onclick="viewTag(event, 'tag_1')">Ендоваскулярна хірургія</button>
 			  </li>
 			  <li>
-			  	<button class="tablinks" onclick="openCity(event, 'tag_2')">Методи лікування</button>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_2')">Методи лікування</button>
 			  </li>
 			  <li>
-			  	<button class="tablinks" onclick="openCity(event, 'tag_3')">Показання</button>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_3')">Показання</button>
 			  </li>
 			  <li>
-			  	<button class="tablinks" onclick="openCity(event, 'tag_4')">Ендоваскулярні втручання</button>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_4')">Ендоваскулярні втручання</button>
 			  </li>
 			  <li>
-			  	<button class="tablinks" onclick="openCity(event, 'tag_5')">Переваги ендоваскулярної хірургії</button>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_5')">Переваги ендоваскулярної хірургії</button>
 			  </li>
 			</ul>
 
@@ -190,7 +190,7 @@
 		</section>
 		<section class="categories">
 			<h3>Підкатегорії</h3>
-			<div>
+			<div class="wrapper">
 				<img src="static/images/big_logo.png">
 				<ul>
 					<li><a href="#">Ангіографія нижніх кінцівок</a></li>
@@ -203,7 +203,7 @@
 				</ul>
 			</div>
 		</section>
-		<section class="our_doctors" id="Doctors">
+		<section class="our_doctors wrapper" id="Doctors">
 			<h3>Наші лікарі</h3>
 			<div class="doctors">
 				<div class="doctor_cart">
@@ -257,13 +257,46 @@
 				</div>
 			</div>
 		</section>
+		<section class="reviews_slider wrapper" id="Reviews">
+			<h3>Відгуки</h3>
+			<div class="slider">
+				<a class="prev" onclick="minusSlide()">&#10094;</a>
+				<div class="slide">
+					<div>
+						<span class="name">Антон</span>
+						<span class="date">23.11.2020</span>
+					</div>
+					<p class="review">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+				</div>
+				<div class="slide">
+					<div>
+						<span class="name">Антон2</span>
+						<span class="date">23.11.2020</span>
+					</div>
+					<p class="review">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+				</div>
+				<div class="slide">
+					<div>
+						<span class="name">Антон3</span>
+						<span class="date">23.11.2020</span>
+					</div>
+					<p class="review">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+				</div>
+    			<a class="next" onclick="plusSlide()">&#10095;</a>
+			</div>
+			<ul class="dots">
+				<li class="dot" onclick="currentSlide(1)"></li>
+				<li class="dot" onclick="currentSlide(2)"></li>
+				<li class="dot" onclick="currentSlide(3)"></li>
+			</ul>
+		</section>
 		<a href="#head" id="top_btn">
 			<img src="static/images/icons/up-arrow.svg" width="25px">
 		</a>
 	</article>
 
 	<footer>
-		<div class="block">
+		<div class="block wrapper">
 			<div class="about_us">
 				<h2>Про нас</h2>
 				<p>Спеціалізований центр здоров’я експертного рівня і узгодженого медичного обслуговування VERUM
@@ -303,7 +336,7 @@
 					<li>
 						<span class="arrow_top"></span>
 						<span class="arrow_bottom"></span>
-						<a href="#">Відгуки</a>
+						<a href="#Reviews">Відгуки</a>
 					</li>
 				</ul>
 			</div>
@@ -332,7 +365,7 @@
 			</div>
 		</div>
 		<div class="bottom_footer">
-			<div>
+			<div class="wrapper">
 				<p>&copy 2021. Все права защищены.</p>
 				<p>
 					<span class="im">ТОВ «МЕДИЧНИЙ ЦЕНТР ВЕРУМ»<br></span>

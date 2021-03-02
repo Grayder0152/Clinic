@@ -28,13 +28,15 @@ h3{
 	margin: 42px 0;
 	font-weight: 800;
 }
-header{
+.wrapper{
 	width: 100%;
 	max-width: 1440px;
+	margin: 0 auto;
+}
+header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 auto;
 	padding:20px 50px;
 }
 header div:first-child{
@@ -156,11 +158,6 @@ article .main h1{
 	color: #fff;
 	z-index: 1;
 }
-article section.tags{
-	width: 100%;
-	max-width: 1440px;
-	margin: 0 auto;
-}
 article section.tags .tab_list {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -232,9 +229,6 @@ article section.categories{
 	margin: 50px 0;
 }
 article section.categories div{
-	width: 100%;
-	max-width: 1440px;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 }
@@ -272,9 +266,7 @@ article section.categories div ul li a:hover{
 	color: var(--main);
 }
 article section.our_doctors{
-	width: 100%;
-	max-width: 1440px;
-	margin: 0 auto;
+	padding: 0 20px;
 }
 article section.our_doctors .doctors{
 	display: flex;
@@ -285,6 +277,7 @@ article section.our_doctors .doctors{
 }
 article section.our_doctors .doctors .doctor_cart{
 	width: min-content;
+	min-width: 320px;
 	padding: 18px 40px 0;
 	display: flex;
 	flex-direction: column;
@@ -324,6 +317,7 @@ article section.our_doctors .doctors .doctor_cart a.blank .name{
 article section.our_doctors .doctors .doctor_cart .subheader{
 	background-color: var(--main);
 	color: #fff;
+	text-align: center;
 	font-size: 14px;
 	padding: 8px 20px;
 	margin: 6px 0 0;
@@ -371,6 +365,94 @@ article section.our_doctors .doctors .doctor_cart .info span{
 	text-align: left;
 	padding-left: 9px;
 }
+article section.reviews_slider{
+	margin-top: 50px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	gap:15px;
+}
+article section.reviews_slider .slider{
+	position: relative;
+}
+article section.reviews_slider .slide{
+	max-width: 550px;
+	min-width: 320px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px 0px var(--black);
+	padding: 30px;
+	border-top: 2px solid var(--main);
+	border-bottom: 2px solid var(--main);
+    animation: showEffect 0.5s; 
+}
+article section.reviews_slider .slide div{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0 20px;
+
+}
+article section.reviews_slider .slide span{
+	font-size: 14px;
+	font-weight: 800;
+	color: var(--black);
+}
+article section.reviews_slider .slide span.name{
+	font-size: 20px;
+}
+article section.reviews_slider .prev,
+article section.reviews_slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    width: auto;
+    color: var(--main);
+    font-size: 35px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+}
+article section.reviews_slider .next {
+    right: -50px;
+    left: auto;
+}
+article section.reviews_slider .prev:hover,
+article section.reviews_slider .next:hover {
+    color: var(--black);
+}
+article section.reviews_slider .dots{
+	list-style: none;
+	display: none;
+	gap:10px;
+}
+article section.reviews_slider .dots li{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	/*background-color: var(--black);*/
+	border:2px solid var(--main);
+	cursor: pointer;
+	transition: 0.5s;
+}
+article section.reviews_slider .dots li:hover,
+article section.reviews_slider .dots li.active{
+	background-color: var(--main);
+	/*border:2px solid var(--black);*/
+}
+
+@keyframes showEffect{
+    from {
+    	opacity: 0;
+    	transform: translateY(-20%);
+    }
+    to {
+    	opacity: 1;
+    	transform: translateY(0);
+    }
+}
+
 article #top_btn{
 	width: 50px;
 	height: 50px;
@@ -394,13 +476,10 @@ footer{
 	margin-top: 100px;
 }
 footer .block{
-	width: 100%;
-	max-width: 1440px;
 	display: flex;
 	flex-flow: wrap;
 	justify-content: space-between;
 	gap:50px;
-	margin: 0 auto;
 	color: #fff;
 	padding: 35px 50px;
 }
@@ -471,13 +550,10 @@ footer .bottom_footer{
 	background-color: rgba(0,0,0,.1);
 }
 footer .bottom_footer div{
-	width: 100%;
-	max-width: 1440px;
 	display: flex;
 	justify-content: space-between;
 	flex-flow: wrap;
 	gap: 30px;
-	margin: 0 auto;
 	color: #fff;
 	padding: 35px 50px;
 }
@@ -541,6 +617,13 @@ footer .bottom_footer p{
 	article section.categories div ul {
 	    grid-template-columns: 1fr;
 	    gap: 15px;
+	}
+	article section.reviews_slider a.next,
+	article section.reviews_slider a.prev{
+		display: none;
+	}
+	article section.reviews_slider .dots{
+		display: flex;
 	}
 	footer .block ul.footer_menu {
     	columns: 1;
