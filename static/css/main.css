@@ -17,8 +17,7 @@ html, body, div, table {
     line-height: 1.6em;
 }
 p, h1, h2, h3, h4, h5, h6, a, li, span {
-    font-family: 'Open Sans',sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 }
 h3{
 	font-size: 36px;
@@ -551,9 +550,6 @@ footer .bottom_footer{
 }
 footer .bottom_footer div{
 	display: flex;
-	justify-content: space-between;
-	flex-flow: wrap;
-	gap: 30px;
 	color: #fff;
 	padding: 35px 50px;
 }
