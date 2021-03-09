@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<title>Ангіографія нижніх кінцівок</title>
+</head>
+<body>
+	<header id="head" class="wrapper">
+		<div>
+			<a href="#"><img src="static/images/logo.png" class="logo"></a>
+			<div class="burger_menu" onclick="burger(this)">
+				<span class="bar1"></span>
+				<span class="bar2"></span>
+				<span class="bar3"></span>
+			</div>
+		</div>
+		<ul class="menu" id="menu">
+			<li>
+				<span onclick="openNav('list_1')">Напрямки лікування<div class="arrow_down"></div></span>
+				<div id="list_1" class="overlay">
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_1')">&times;</a>
+				  <div>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				  </div>
+				</div>
+			</li>
+
+			<li>
+				<span onclick="openNav('list_2')">Діагностика<div class="arrow_down"></div></span>
+				<div id="list_2" class="overlay">
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_2')">&times;</a>
+
+				  <div>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				  </div>
+				</div>
+			</li>
+			<li><a href="#">Симптоми та діагнози</a></li>			
+			<li><a href="#Doctors">Лікарі</a></li>
+			<li><a href="#">Контакти</a></li>
+			<li><a href="#Reviews">Відгуки</a></li>
+		</ul>
+	</header>
+	<article>
+		<div class="main" style="background-image: url(static/images/bg_ang.jpg);">
+			<h1>Ангіографія нижніх кінцівок</h1>
+		</div>
+		<section class="tags wrapper">
+			<ul class="tab_list" style="grid-template-columns: repeat(3, 1fr);">
+			  <li>
+			  	<button class="tablinks" id="default_open" onclick="viewTag(event, 'tag_1')">Балонна ангіопластика судин нижніх кінцівок </button>
+			  </li>
+			  <li>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_2')">Як проходить процедура ангіопластики ?</button>
+			  </li>
+			  <li>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_3')">Реабілітація</button>
+			  </li>
+			</ul>
+
+			<div id="tag_1" class="tabcontent">
+			  	<h3>Центр ендоваскулярної хірургії</h3>
+			  	<div class="conteiner">
+			  		<div>
+			  			<img src="static/images/ang_low_ex.jpg">
+			  		</div>
+			  		<div>
+			  			<p><strong>Балонна ангіопластика артерій нижніх кінцівок</strong> – метод ендоваскулярного відновлення кровотоку (реваскуляризація) дозволяє без розрізів і загального наркозу усунути критично звужений або закупорений ділянку артерії внаслідок атерсклерозу.
+						Сенс ангіопластики судин полягає в розширенні звуженого або закупореного сегмента за допомогою спеціального балона, проведеного по тонкому провіднику. Після ангіопластики в просвіт відновленої судини для підтримки стінки може встановлюватися спеціальна металева конструкція – стент.</p>
+			  			<h3>Покази до лікування</h3>
+			  			<ul>
+							<li>Пацієнт проходить менше 200 метрів по прямій.;</li>
+							<li> Поява "болів спокою", тобто болів, що виникають в горизонтальному положенні, що змушує хворого періодично опускати ногу вниз (до 3-4 разів за ніч);</li>
+							<li> Ішемічний набряк гомілки і стопи. Пацієнт змушений опускати ногу більше 3-4 разів за ніч;</li>
+							<li> Некротичні зміни в пальцях стопи.</li>
+							<li>Гангрена стопи або гомілки;</li>
+							<li>Ангіопластика показана у випадках, коли відсутня клінічне поліпшення, незважаючи на проведену терапію і зміна способу життя.</li>
+			  			</ul>
+			  		</div>
+				</div>
+			</div>
+			<div id="tag_2" class="tabcontent">
+			  	<h3>Як проходить процедура ангіопластики ?</h3>
+			  	<div class="conteiner">
+			  		<div>
+			  			<p>Для проведення оперативного втручання на артеріях нижніх кінцівок пацієнт укладається в положенні лежачи на спині. Зазвичай застосовується доступ через стегнову артерію, але можливий і ретроградний доступ через судини на стопі, а також радіальний доступ в області лучезапястного суглоба. Доступ до судини здійснюється під УЗД контролем на апаратах експертного класу.</p>
+			  			<p>Після введення голки, під УЗД контролем, в судину вводиться тонкий провідник по якому встановлюється спеціальний катетер (інтродьюсер). Після установки інтродьюсера виконується контрольна ангіографія для уточнення тактики і обсягу операції. Далі провідником проходять через місце ураженої артерії з подальшим введенням спеціального балона для здійснення ангіопластики. Балон роздмухують в місці звуження, тим самим моделюючи достатній просвіт артерії. Після проведення ангіопластики здійснюється також контрольна ангіографія для оцінки прохідності кровотоку по артеріях.</p>
+						За своїми безпосередніми результатами цей метод не поступається відкритим операціям по відновленню кровотоку.</p>
+			  		</div>
+				</div>
+			</div>
+			<div id="tag_3" class="tabcontent">
+			  	<h3>Реабілітація</h3>
+			  	<div class="conteiner">
+			  		<div>
+			  			<p>Реабілітація після операції проходить досить швидко: в перший день пацієнт знаходиться в стаціонарі під наглядом лікарів, після чого відправляється додому. Через 7-10 днів після цього можна повертатися до звичайного ритму життя.</p>
+			  		</div>
+				</div>
+			</div>
+		</section>
+		
+		<a href="#head" id="top_btn">
+			<img src="static/images/icons/up-arrow.svg" width="25px">
+		</a>
+	</article>
+
+	<footer>
+		<div class="block wrapper">
+			<div class="about_us">
+				<h2>Про нас</h2>
+				<ul>
+					<li><img src="static/images/icons/placeholder.svg" width="20px">Третя Черкаська міська лікарня</li>
+					<li><img src="static/images/icons/clock.svg" width="15px">м.Черкаси, Самійла кішки 210</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Меню</h2>
+				<ul class="footer_menu">
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#" onclick="openNav('list_1')">Напрямки лікування</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#" onclick="openNav('list_2')">Діагностика</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#">Симптоми та діагнози</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#Doctors">Лікарі</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#">Контакти</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#Reviews">Відгуки</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Контакти</h2>
+				<ul>
+					<li>
+						<a href="tel:+380976940378" class="contact">
+							<img src="static/images/icons/phone-call.svg" width="20px">
+							+38-097-694-0378
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/groups/interventional3clinic" class="contact">
+							<img src="static/images/icons/facebook.svg" width="20px">
+							Наш FaceBook
+						</a>
+					</li>
+					<li>
+						<a href="#" class="contact">
+							<img src="static/images/icons/youtube.svg" width="20px">
+							Наш YouTube
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom_footer">
+			<div class="wrapper">
+				<p>&copy 2021. Все права защищены.</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="static/js/main.js"></script>
+</body>
+</html>

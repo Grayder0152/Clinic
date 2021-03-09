@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<title>Емболізація маткової артерії(EMA)</title>
+</head>
+<body>
+	<header id="head" class="wrapper">
+		<div>
+			<a href="#"><img src="static/images/logo.png" class="logo"></a>
+			<div class="burger_menu" onclick="burger(this)">
+				<span class="bar1"></span>
+				<span class="bar2"></span>
+				<span class="bar3"></span>
+			</div>
+		</div>
+		<ul class="menu" id="menu">
+			<li>
+				<span onclick="openNav('list_1')">Напрямки лікування<div class="arrow_down"></div></span>
+				<div id="list_1" class="overlay">
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_1')">&times;</a>
+				  <div>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				  </div>
+				</div>
+			</li>
+
+			<li>
+				<span onclick="openNav('list_2')">Діагностика<div class="arrow_down"></div></span>
+				<div id="list_2" class="overlay">
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_2')">&times;</a>
+
+				  <div>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				    <a href="#">Any_page</a>
+				  </div>
+				</div>
+			</li>
+			<li><a href="#">Симптоми та діагнози</a></li>			
+			<li><a href="#Doctors">Лікарі</a></li>
+			<li><a href="#">Контакти</a></li>
+			<li><a href="#Reviews">Відгуки</a></li>
+		</ul>
+	</header>
+	<article>
+		<div class="main" style="background-image: url(static/images/bg.jpg);">
+			<h1>Емболізація маткової артерії(EMA)</h1>
+		</div>
+		<section class="tags wrapper">
+			<ul class="tab_list" style="grid-template-columns: repeat(3, 1fr);">
+			  <li>
+			  	<button class="tablinks" id="default_open" onclick="viewTag(event, 'tag_1')">Емболізація маткової артерії(EMA) - малоінвазивне лікування міом</button>
+			  </li>
+			  <li>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_2')">Переваги умболізації, показання, протипоказання</button>
+			  </li>
+			  <li>
+			  	<button class="tablinks" onclick="viewTag(event, 'tag_3')">Як проходить операція?</button>
+			  </li>
+			</ul>
+
+			<div id="tag_1" class="tabcontent">
+			  	<h3>Емболізація маткової артерії(EMA) - малоінвазивне лікування міом</h3>
+			  	<div class="conteiner">
+			  		<div>
+			  			<img src="static/images/ema_2.jpg">
+			  		</div>
+			  		<div>
+			  			<p>Це<strong> сучасний метод</strong> лікування міом, що відтепер не вимагає масивного хірургічного втручання і тяжкого післяопераційного відновлення пацієнтки. Медичний ефект досягається шляхом перекриття подачі крові в міоматіческіх вузлах за допомогою спеціального медичного препарату, який надходить в маткові артерії за допомогою маніпуляцій , що виконуються на ангіографі через невеличкий прокол в ділянці стегнової артерії в яку вводять катетер.</p>
+			  			<p><strong>Емболізація судин</strong> міоматозного вузла полягає у введенні спеціальних емболізатів. Під час лікування за допомогою емболізації перекривають артеріальні судини , крізь які кров надходить до міоматозного маткового вузла.</p>
+			  		</div>
+				</div>
+			</div>
+			<div id="tag_2" class="tabcontent">
+			  	<h3>Переваги умболізації, показання, протипоказання</h3>
+			  	<div class="conteiner">
+			  		<div>
+			  			<img src="static/images/ema.jpg">
+			  		</div>
+			  		<div>
+			  			<ol>
+			  				<li>можливість швидко усунення пухлин, що з'являються у важкодоступних місцях;</li>
+			  				<li>значне скорочення ймовірності рецидивів - емболізація грунтується на методиці, яка дозволяє швидко припинити кровотік судин , що підтримують ріст новоутворення;</li>
+			  				<li>швидке відновлення - новітня методика дозволяє уникнути розрізів та важкого наркозу;</li>
+			  				<li>мінімальна кількість ускладнень і протипоказань;</li>
+			  			</ol>
+						<h3>Показання</h3>
+						<p>Емболізація артерій малого таза проводиться за наступними показниками:</p>
+			  			<ul>
+							<li>різні кровотечі;</li>
+							<li>міома матки у жінок;</li>
+							<li>варикоцеле у чоловіків;</li>
+							<li>підготовка до міомектомії або гістерорезектоскопії;</li>
+							<li>стани, які потребують ізоляції окремої ділянки судинного русла із загального кровопостачання;</li>
+							<li>зростаюча неоперабельна пухлина.</li>
+			  			</ul>
+			  			<p>Основні протипоказання</p>
+			  			<ul>
+			  				<li>непереносимість контрастної речовини;</li>
+			  				<li>вагітність;</li>
+			  				<li>наявність гострих запальних процесів;</li>
+			  				<li>порушення згортання крові.</li>
+			  			</ul>
+			  		</div>
+				</div>
+			</div>
+			<div id="tag_3" class="tabcontent">
+			  	<h3>Як проходить операція?</h3>
+			  	<div class="conteiner">
+			  		<div>
+			  			<h4>ПРОВЕДЕННЯ ОПЕРАЦІЇ</h4>
+			  			<p>Емболізація артерій малого тазу проводиться в спеціально обладнаній операційній, оснащеній ангіографом і інший інтервенційної радіологічної апаратурою. Для можливості візуального контролю в кров вводиться контрастна речовина.</p>
+			  			<p>Через стегнову артерію вводиться спеціальний катетер, який проводиться по природному кров'яному руслу до потрібного місця. Після цього лікар вводить спеціальний емболізуючий препарат, який блокує кровоток судин. Відсутність кровопостачання контролюється на екрані ангіографа. Артеріальні гілки, що забезпечують здорову частину органу при цьому не страждають. Найчастіше операція проводиться під місцевою анестезією і займає близько 30-60 хвилин.</p>
+			  			<h4>РЕАБІЛІТАЦІЯ</h4>
+			  			<p>Через стегнову артерію вводиться спеціальний катетер, який проводиться по природному кров'яному руслу до потрібного місця. Після цього лікар вводить спеціальний емболізуючий препарат, який блокує кровоток судин. Відсутність кровопостачання контролюється на екрані ангіографа. Артеріальні гілки, що забезпечують здорову частину органу при цьому не страждають. Найчастіше операція проводиться під місцевою анестезією і займає близько 30-60 хвилин. Зазвичай пацієнт проводить в стаціонарі кілька днів під наглядом лікарів, після чого може відправитися додому. Протягом декількох місяців після цього необхідно виключити підвищені навантаження на серцево-судинну систему.</p>
+			  		</div>
+				</div>
+			</div>
+		</section>
+		
+		<a href="#head" id="top_btn">
+			<img src="static/images/icons/up-arrow.svg" width="25px">
+		</a>
+	</article>
+
+	<footer>
+		<div class="block wrapper">
+			<div class="about_us">
+				<h2>Про нас</h2>
+				<ul>
+					<li><img src="static/images/icons/placeholder.svg" width="20px">Третя Черкаська міська лікарня</li>
+					<li><img src="static/images/icons/clock.svg" width="15px">м.Черкаси, Самійла кішки 210</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Меню</h2>
+				<ul class="footer_menu">
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#" onclick="openNav('list_1')">Напрямки лікування</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#" onclick="openNav('list_2')">Діагностика</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#">Симптоми та діагнози</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#Doctors">Лікарі</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#">Контакти</a>
+					</li>
+					<li>
+						<span class="arrow_top"></span>
+						<span class="arrow_bottom"></span>
+						<a href="#Reviews">Відгуки</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Контакти</h2>
+				<ul>
+					<li>
+						<a href="tel:+380976940378" class="contact">
+							<img src="static/images/icons/phone-call.svg" width="20px">
+							+38-097-694-0378
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/groups/interventional3clinic" class="contact">
+							<img src="static/images/icons/facebook.svg" width="20px">
+							Наш FaceBook
+						</a>
+					</li>
+					<li>
+						<a href="#" class="contact">
+							<img src="static/images/icons/youtube.svg" width="20px">
+							Наш YouTube
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom_footer">
+			<div class="wrapper">
+				<p>&copy 2021. Все права защищены.</p>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="static/js/main.js"></script>
+</body>
+</html>
