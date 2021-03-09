@@ -605,7 +605,7 @@ footer .bottom_footer p{
 		padding: 20px 30px 5px;
 	}
 	article section.tags .tab_list{
-    	grid-template-columns: 1fr;
+    	grid-template-columns: 1fr!important;
 	}
 	article section.tags .tabcontent img {
 	    width: 100%;
