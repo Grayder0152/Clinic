@@ -59,7 +59,7 @@ function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("slide");
     var dots = document.getElementsByClassName("dot");
-
+    slides[0].style.display = "block";
     if (n > slides.length) {
       slideIndex = 1
     }
