@@ -44,7 +44,7 @@ header div:first-child{
 	justify-content: space-between;
 }
 header .logo{
-	max-width: 80px;
+	max-width: 120px;
 }
 header .burger_menu {
     display: none;
