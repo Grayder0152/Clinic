@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Артеріографія печінкової артерії{% endblock title %}
+
+{% block content %}
+
+<section class="wrapper diagnostics">
+	<center><h3>Артеріографія печінкової артерії</h3></center>
+	<img src="{{ url_for('static', filename='images/arteriography_hepatic_artery.jpg') }}">
+	<p>
+		<strong>Артеріографія печінкової артерії</strong> - проводиться для діагностики пухлин печінки, цирозу.
+	</p>
+</section>
+
+{% endblock %}

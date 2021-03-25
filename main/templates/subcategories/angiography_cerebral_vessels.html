@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="main" style="background-image: url({{ url_for('static', filename='images/bg.jpg') }})">
+    <h1>Ангіографія судин головного мозку</h1>
+</div>
+<section class="tags wrapper">
+    <ul class="tab_list" style="grid-template-columns: repeat(2, 1fr);">
+        <li>
+            <button class="tablinks" id="default_open" onclick="viewTag(event, 'tag_1')">Церебральна ангіографія
+            </button>
+        </li>
+        <li>
+            <button class="tablinks" onclick="viewTag(event, 'tag_2')">Надання ургентної допомоги</button>
+        </li>
+    </ul>
+
+    <div id="tag_1" class="tabcontent">
+        <h3>Церебральна ангіографія </h3>
+        <div class="conteiner">
+            <div>
+                <img src="{{ url_for('static', filename='images/ang_sud_main_branch.jpg') }}">
+            </div>
+            <div>
+                <p><strong>Церебральна ангіографія</strong> використовується для виявлення або виключення патології
+                    кровоносних судин головного мозку, таких як:</p>
+                <ul>
+                    <li>аномальні кровоносні судину (судинна мальформація);</li>
+                    <li>аневризми;</li>
+                    <li>звуження артерій головного мозку;</li>
+                    <li>васкуліти.</li>
+                </ul>
+                <p>Такоже дослідження використовується для:</p>
+                <ul>
+                    <li>підтвердження наявності та локалізації пухлини головного мозку;</li>
+                    <li>оцінки артерій голови та шиї перед операцією;</li>
+                    <li>визначення наявності тромбів в судинах головного мозком, які можуть стати причиною інсульту.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="tag_2" class="tabcontent">
+        <h3>Надання ургентної допомоги </h3>
+        <div class="conteiner">
+            <div>
+                <ul>
+                    <li>стентування судин головного мозку;</li>
+                    <li>контактний тромболізис;</li>
+                    <li>виключення із кровотоку потенційно небезпечних ділянок артеріального русла , що можуть призвести
+                        до геморрагічного інсульту;
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="{{ url_for('static', filename='js/tags.js') }}"></script>
+{% endblock %}
