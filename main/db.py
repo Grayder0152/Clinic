@@ -1,12 +1,12 @@
 import sqlite3
 
-DB_NAME = '../database.db'
+DB_NAME = 'database.db'
 
 
 def connect(func):
     def wrapper(**kwargs):
+        db = sqlite3.connect(DB_NAME)
         try:
-            db = sqlite3.connect(DB_NAME)
             cursor = db.cursor()
             return func(
                 cursor,
