@@ -96,24 +96,37 @@ header .menu{
 	gap: 20px;
 	list-style-type: none;
 }
+header .menu li{
+	text-align: center;
+}
 header .menu a,
 header .menu span{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
 	cursor: pointer;
 	color: var(--black);
 	padding: 0 10px;
 	font-weight: 700;
     transition: 0.3s;
+    position: relative;
 }
-header .menu span .arrow_down {
-  width: 0; 
-  height: 0; 
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid var(--black);
+header .menu span:before{
+	content: '';
+	position: absolute;
+	right: -8px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid var(--black);
+	transition: 0.3s;
+}
+header .menu a:hover,
+header .menu span:hover{
+	color:var(--main)!important;
+}
+header .menu span:hover:before{
+	border-top-color: var(--main);
 }
 header .menu .overlay {
     height: 0;
@@ -129,10 +142,16 @@ header .menu .overlay {
     overflow-x: hidden;
     transition: 0.4s; 
 }
+header .menu .overlay div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap:20px;
+}
 header .menu .overlay div a{
     color: #fff;
     font-size: 28px;
-    margin-top: 25px;
     text-align: center;
 }
 header .menu .overlay a.closebtn{
@@ -142,13 +161,7 @@ header .menu .overlay a.closebtn{
     right: 50px;
     font-size: 60px;
 }
-header .menu a:hover,
-header .menu span:hover{
-	color:var(--main)!important;
-}
-header .menu span:hover .arrow_down{
-	border-top-color: var(--main);
-}
+
 
 article .main{
 	width: 100%;
@@ -630,7 +643,7 @@ footer .bottom_footer p{
 		transition: 0.5s;
 	}
 	header .show_menu{
-		height: 260px;
+		height: 185px;
 		opacity: 1;
 	}
 	header .burger_menu{
@@ -657,9 +670,19 @@ footer .bottom_footer p{
 }
 @media screen and (max-width:720px){
 	header{
-		padding: 20px 30px 5px;
+		padding: 20px 20px 5px 5px;
 	}
-	.main{
+	header .menu .overlay div{
+		gap:10px;
+	}
+	header .menu .overlay div a{
+		font-size: 20px;
+	}
+	header .menu .overlay a.closebtn{
+		top: 25px;
+		right: 15px;
+	}
+	article .main{
 		background-image: url('../images/bg_mob.jpg')!important;
 	}
 	article section.tags .tab_list{
