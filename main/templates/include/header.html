@@ -8,10 +8,11 @@
         </div>
     </div>
     <ul class="menu" id="menu">
+        <li><a href="{{ url_for('index') }}">Головна</a></li>
         <li>
-            <span onclick="openNav('list')">Діагностика</span>
-            <div id="list" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list')">&times;</a>
+            <span onclick="openNav('list_1')">Діагностика</span>
+            <div id="list_1" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_1')">&times;</a>
                 <div>
                     <a href="{{ url_for('coronary_ventriculography') }}">Коронаровентрикулографія</a>
                     <a href="{{ url_for('cerebral_angiography') }}">Церебральна ангіографія</a>
@@ -28,8 +29,23 @@
                 </div>
             </div>
         </li>
+        <li>
+          <span onclick="openNav('list_2')">Напрямки лікування</span>
+          <div id="list_2" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_2')">&times;</a>
+              <div>
+                <a href="{{ url_for('angiography_lower_extremities') }}">Ангіографія нижніх кінцівок</a>
+                <a href="{{ url_for('ema') }}">Емболізація маткових артерій (ЕМА)</a>
+                <a href="{{ url_for('varicocele_embolization') }}">Емболізація варікоцеле</a>
+                <a href="{{ url_for('balloon_angioplasty_vessels') }}">Балонна ангіопластика судин</a>
+                <a href="{{ url_for('embolization_prostate_arteries') }}">Емболізація артерій простати</a>
+                <a href="{{ url_for('coronary_angiography_heart_pain') }}">Коронарографія при болях в серці</a>
+                <a href="{{ url_for('angiography_cerebral_vessels') }}">Ангіографія судин головного мозку</a>
+              </div>
+          </div>
+        </li>
         <li><a href="{{ url_for('index') }}#Doctors">Лікарі</a></li>
-        <li><a href="#">Контакти</a></li>
         <li><a href="{{ url_for('index') }}#Reviews">Відгуки</a></li>
+        <li><a href="#">Контакти</a></li>
     </ul>
 </header>
