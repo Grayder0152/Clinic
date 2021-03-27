@@ -1,7 +1,7 @@
 window.onload = function() {
     window.setTimeout(function () {
         document.querySelector('.preloader').classList.add("preloader-remove");
-    }, 2500);
+    }, 500);
 };
 
 window.addEventListener('scroll', function() {
