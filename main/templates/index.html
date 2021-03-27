@@ -30,7 +30,7 @@
         <h3>Центр ендоваскулярної хірургії</h3>
         <div class="conteiner">
             <div>
-                <img src="{{ url_for('static', filename='images/tab_1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/tab_1.jpg') }}" loading="lazy">
             </div>
             <div>
                 <p><strong>Ендоваскулярна хірургія</strong> – це підрозділ малоінвазивної судинної хірургії, який
@@ -67,7 +67,7 @@
         <h3>Ендоваскулярні методи лікування</h3>
         <div class="conteiner">
             <div>
-                <img src="{{ url_for('static', filename='images/tab_2.jpeg') }}">
+                <img src="{{ url_for('static', filename='images/tab_2.jpeg') }}" loading="lazy">
             </div>
             <div>
                 <p>Ендоваскулярна хірургія використовує наступні маніпуляції:</p>
@@ -124,7 +124,7 @@
                     метод, постійно збільшується.</p>
             </div>
             <div>
-                <img src="{{ url_for('static', filename='images/tab_3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/tab_3.jpg') }}" loading="lazy">
             </div>
         </div>
     </div>
@@ -188,7 +188,7 @@
 <section class="categories">
     <h3>Підкатегорії</h3>
     <div class="wrapper">
-        <img src="{{ url_for('static', filename='images/logo.png') }}">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" loading="lazy">
         <ul>
             <li><a href="{{ url_for('angiography_lower_extremities') }}">Ангіографія нижніх кінцівок</a></li>
             <li><a href="{{ url_for('ema') }}">Емболізація маткових артерій (ЕМА)</a></li>
@@ -263,9 +263,9 @@
 </section>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/tags.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js" defer></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/tags.js') }}" defer></script>
 {% endblock %}
