@@ -3,18 +3,13 @@
 		<div class="about_us">
 			<h2>Про нас</h2>
 			<ul>
-				<li><img src="{{ url_for('static', filename='images/icons/placeholder.svg') }}" width="20px">Третя Черкаська міська лікарня</li>
-				<li><img src="{{ url_for('static', filename='images/icons/clock.svg') }}" width="15px">м.Черкаси, Самійла кішки 210</li>
+				<li><img src="{{ url_for('static', filename='images/icons/placeholder.svg') }}" width="20px" loading="lazy">Третя Черкаська міська лікарня</li>
+				<li><img src="{{ url_for('static', filename='images/icons/clock.svg') }}" width="15px" loading="lazy">м.Черкаси, Самійла кішки 210</li>
 			</ul>
 		</div>
 		<div>
 			<h2>Меню</h2>
 			<ul class="footer_menu">
-				<li>
-					<span class="arrow_top"></span>
-					<span class="arrow_bottom"></span>
-					<a href="#" onclick="openNav('list_1')">Напрямки лікування</a>
-				</li>
 				<li>
 					<span class="arrow_top"></span>
 					<span class="arrow_bottom"></span>
@@ -42,19 +37,19 @@
 			<ul>
 				<li>
 					<a href="tel:+380976940378" class="contact">
-						<img src="{{ url_for('static', filename='images/icons/phone-call.svg') }}" width="20px">
+						<img src="{{ url_for('static', filename='images/icons/phone-call.svg') }}" width="20px" loading="lazy">
 						+38-097-694-0378
 					</a>
 				</li>
 				<li>
 					<a href="https://www.facebook.com/groups/interventional3clinic" class="contact">
-						<img src="{{ url_for('static', filename='images/icons/facebook.svg') }}" width="20px">
+						<img src="{{ url_for('static', filename='images/icons/facebook.svg') }}" width="20px" loading="lazy">
 						Наш FaceBook
 					</a>
 				</li>
 				<li>
 					<a href="#" class="contact">
-						<img src="{{ url_for('static', filename='images/icons/youtube.svg') }}" width="20px">
+						<img src="{{ url_for('static', filename='images/icons/youtube.svg') }}" width="20px" loading="lazy">
 						Наш YouTube
 					</a>
 				</li>
@@ -67,4 +62,4 @@
 		</div>
 	</div>
 </footer>
-<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}" defer async></script>

@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 <div class="main" style="background-image: url({{ url_for('static', filename='images/bg.jpg') }}">
     <h1>Відділення ендоваскулярної хірургії</h1>
@@ -237,6 +236,11 @@
 </section>
 <section class="reviews_slider wrapper" id="Reviews">
     {% if reviews %}
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js" defer></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}" defer></script>
         <h3>Відгуки</h3>
         <div class="slider">
             {% for review in reviews %}
@@ -260,12 +264,12 @@
         <textarea name="text" placeholder="Ваш відгук..."></textarea>
         <input type="submit" value="Відправити">
     </form>
+    <script type="text/javascript">
+        function show_form(){
+            document.getElementById('form_btn').style.display = "none";
+            document.getElementById('review_form').style.display = "flex";
+        }
+    </script>
 </section>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js" defer></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}" defer></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/tags.js') }}" defer></script>
 {% endblock %}

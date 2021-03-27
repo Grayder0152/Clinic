@@ -43,7 +43,3 @@ $("#review_form").validate({
         }
     }
 });
-function show_form(){
-    document.getElementById('form_btn').style.display = "none";
-    document.getElementById('review_form').style.display = "flex";
-}
