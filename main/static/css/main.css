@@ -165,14 +165,13 @@ header .menu .overlay a.closebtn{
 
 article .main{
 	width: 100%;
-	min-height: 40vh;
+	height: 40vh;
+  max-height: 1000px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  background: #fff center bottom no-repeat fixed url('../images/bg.jpg');
   background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: fixed;
   position: relative;
   padding: 0 20px;
 }
@@ -685,6 +684,9 @@ footer .bottom_footer p{
 	}
 	article .main{
 		background-image: url('../images/bg_mob.jpg')!important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 	}
 	article section.tags .tab_list{
     	grid-template-columns: 1fr!important;
