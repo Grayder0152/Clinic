@@ -15,15 +15,15 @@
 					<span class="arrow_bottom"></span>
 					<a href="{{ url_for('index') }}">Головна</a>
 				</li>
-				<li>
+				<li onclick="openNav('list_1')">
 					<span class="arrow_top"></span>
 					<span class="arrow_bottom"></span>
-					<a href="#" onclick="openNav('list_1')">Діагностика</a>
+					<span class="a" >Діагностика</span>
 				</li>
 				<li>
 					<span class="arrow_top"></span>
 					<span class="arrow_bottom"></span>
-					<a href="#" onclick="openNav('list_2')">Напрямки лікування</a>
+					<span class="a" onclick="openNav('list_2')">Напрямки лікування</span>
 				</li>
 				<li>
 					<span class="arrow_top"></span>
@@ -47,13 +47,13 @@
 					</a>
 				</li>
 				<li>
-					<a href="https://www.facebook.com/groups/interventional3clinic" class="contact">
+					<a href="https://www.facebook.com/groups/interventional3clinic" class="contact" target="_blank">
 						<img src="{{ url_for('static', filename='images/icons/facebook.svg') }}" width="20px" loading="lazy">
 						Наш FaceBook
 					</a>
 				</li>
 				<li>
-					<a href="#" class="contact">
+					<a href="#" class="contact" target="_blank">
 						<img src="{{ url_for('static', filename='images/icons/youtube.svg') }}" width="20px" loading="lazy">
 						Наш YouTube
 					</a>

@@ -4,6 +4,7 @@ from flask import (
     Flask,
     render_template,
     request,
+    session,
     redirect
 )
 
@@ -12,7 +13,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', reviews=db.select_reviews())
+    if 'reviews' not in session:
+        session['reviews'] = db.select_reviews()
+    return render_template('index.html', reviews=session['reviews'])
 
 
 @app.route('/review', methods=['POST'])
@@ -23,6 +26,7 @@ def review():
         text = request.form['text']
         date_time = date.today().strftime("%d.%m.%Y")
         db.insert_new_review(name=name, text=text, date=date_time)
+        session['reviews'] = db.select_reviews()
     return redirect('/')
 
 
