@@ -333,7 +333,7 @@ article section.our_doctors .doctors .doctor_cart a.blank .photo{
 	height: 265px;
 	border-radius: 50%;
 	background-size: 100%;
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 article section.our_doctors .doctors .doctor_cart a.blank .name{

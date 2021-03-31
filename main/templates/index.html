@@ -205,7 +205,7 @@
         <div class="doctor_cart">
             <span class="place">Клініка</span>
             <a href="#" class="blank">
-                <div class="photo" style=""></div>
+                <div class="photo" style="background-image:url('{{ url_for('static', filename='images/doctor_1.webp') }}')"></div>
                 <div class="name">ПІБ</div>
             </a>
             <span class="subheader">Ендоваскулярна хірургія</span>
@@ -221,7 +221,7 @@
         <div class="doctor_cart">
             <span class="place">Клініка</span>
             <a href="#" class="blank">
-                <div class="photo" style=""></div>
+                <div class="photo" style="background-image:url('{{ url_for('static', filename='images/doctor_2.webp') }}')"></div>
                 <div class="name">ПІБ</div>
             </a>
             <span class="subheader">Судинна хірургія</span>
@@ -254,7 +254,7 @@
             {% endfor %}
         </div>
     {% else %}
-        <h3>Відгуків поки немає. Будьте першим, хто їх залише!</h3>
+        <h3>Відгуків поки немає. Будьте першим, хто їх залишить!</h3>
     {% endif %}
 
     <button id="form_btn" onclick="show_form();">Залишити відгук</button>
