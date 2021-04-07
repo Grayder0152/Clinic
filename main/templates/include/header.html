@@ -1,6 +1,9 @@
 <header id="head" class="wrapper">
     <div>
-        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo_header.png') }}" class="logo"></a>
+        <a href="{{ url_for('index') }}" class="link_logo">
+            <img src="{{ url_for('static', filename='images/logo_header.png') }}" class="logo">
+            <span>Відділення інтервенційної<br>кардіології та малоінвазивної<br>хірургії</span>
+        </a>
         <div class="burger_menu" onclick="burger(this)">
             <span class="bar1"></span>
             <span class="bar2"></span>

@@ -64,8 +64,16 @@ header div:first-child{
 	align-items: center;
 	justify-content: space-between;
 }
+header .link_logo{
+    display: flex;
+    align-items: center;
+    color: #000;
+    padding: 15px 0px;
+    gap: 2px;
+    font-size: 15px;
+}
 header .logo{
-	max-width: 300px;
+	max-width: 120px;
 }
 header .burger_menu {
     display: none;
@@ -683,6 +691,10 @@ footer .bottom_footer p{
 	header{
 		padding: 20px 20px 5px 5px;
 	}
+	header .link_logo {
+        font-size: 13px;
+        font-weight: bolder;
+    }
 	header .menu .overlay div{
 		gap:10px;
 	}
