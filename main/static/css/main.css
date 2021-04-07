@@ -319,7 +319,6 @@ article section.our_doctors .doctors .doctor_cart{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
 	background-color: var(--gray);
 	border-radius: 8px;
 	position: relative;
