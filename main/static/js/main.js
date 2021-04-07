@@ -17,7 +17,7 @@ window.addEventListener('scroll', function() {
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
+    smoothLink.addEventListener('click', function(e){
         e.preventDefault();
         const id = smoothLink.getAttribute('href');
 
@@ -28,16 +28,14 @@ for (let smoothLink of smoothLinks) {
     });
 };
 
-function openNav(id) {
+function openNav(id){
     document.getElementById(id).style.height = "100vh";
 }
 
-function closeNav(id) {
+function closeNav(id){
     document.getElementById(id).style.height = "0";
 } 
 function burger(el){
     el.classList.toggle('active');
     document.getElementById('menu').classList.toggle('show_menu');
 }
-
-

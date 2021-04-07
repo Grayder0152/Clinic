@@ -2,3 +2,6 @@
 __pycahce__
 venv
 database.db
+.htaccess
+runtime.txt
+

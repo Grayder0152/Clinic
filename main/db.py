@@ -16,7 +16,6 @@ def connect(func):
                 review_id=kwargs.get('review_id')
             )
         except sqlite3.OperationalError as e:
-            print(e)
             db.execute(
                 'CREATE TABLE IF NOT EXISTS Reviews('
                 'id INTEGER PRIMARY KEY autoincrement,'
