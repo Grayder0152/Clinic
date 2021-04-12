@@ -180,7 +180,7 @@ article .main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  background: #fff center no-repeat url('../images/bg.jpg');
+  background: #fff center no-repeat url('../images/bg.webp');
   background-size: 100%;
   position: relative;
   padding: 0 20px;
@@ -705,7 +705,7 @@ footer .bottom_footer p{
 		right: 15px;
 	}
 	article .main{
-		background-image: url('../images/bg_mob.jpg')!important;
+		background-image: url('../images/bg_mob.webp')!important;
     background-size: cover;
 	}
 	article section.tags .tab_list{
