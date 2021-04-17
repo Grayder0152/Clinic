@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <h3>Вхід до адміністративної панелі</h3>
+    <form method="POST" id='login'>
+        <input type="text" name="username" placeholder="Логін">
+        <input type="password" name="password" placeholder="Пароль">
+        <input type="submit" value="Увійти">
+        <span>{{ message }}</span>
+
+    </form>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #login{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        #login input{
+            padding: 15px;
+            border-radius: 5px;
+            background-color: var(--gray);
+            border: 1px solid var(--black);
+        }
+        #login input[type='submit']{
+            padding: 10px;
+            background-color: var(--main);
+            width: 100%;
+            cursor: pointer;
+            border: 0;
+        }
+        span{
+            color:red;
+        }
+    </style>
+</body>
+</html>
+
+
+
+

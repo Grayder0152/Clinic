@@ -1,38 +1,74 @@
-from datetime import date
-from main import db
+from .models import Reviews, User
+from app import db, app, login_manager
+
+from flask_admin import Admin, AdminIndexView, expose
+from flask_admin.contrib.sqla import ModelView
+from flask_login import login_required, login_user, current_user
 from flask import (
-    Flask,
     render_template,
     request,
-    session,
     redirect
 )
 
-app = Flask(__name__)
+
+class MyAdminIndexView(AdminIndexView):
+    @expose()
+    @login_required
+    def index(self):
+        return self.render(self._template)
+
+
+class MicroBlogModelView(ModelView):
+
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect('/login')
+
+
+admin = Admin(app, name='Clinic', template_mode='bootstrap4',
+              index_view=MyAdminIndexView(endpoint="admin", url="/admin"))
+admin.add_view(MicroBlogModelView(Reviews, db.session))
 
 
 @app.route('/')
 def index():
-    if 'reviews' not in session:
-        session['reviews'] = db.select_reviews()
-    return render_template('index.html', reviews=session['reviews'])
+    """Головна сторінка"""
+    return render_template('index.html', reviews=Reviews.query.all())
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    """Збереження користувача"""
+    return db.session.query(User).get(user_id)
+
+
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    """Вхід до адміністративної панелі"""
+    message = ''
+    if request.method == 'POST':
+        user = User.query.filter_by(username=request.form.get('username')).first()
+        if user and user.check_password(request.form.get('password')):
+            login_user(user)
+            return redirect('/admin/reviews')
+        else:
+            message = "Невірний логін або пароль"
+    return render_template('login.html', message=message)
 
 
 @app.route('/review', methods=['POST'])
 def review():
-    """Додавлення нового відгуку в базу"""
+    """Додавлення нового відгуку в БД"""
     if request.method == 'POST':
-        name = request.form['name']
-        text = request.form['text']
-        date_time = date.today().strftime("%d.%m.%Y")
-        db.insert_new_review(name=name, text=text, date=date_time)
-        session['reviews'] = db.select_reviews()
-    return redirect('/')
-
-
-@app.errorhandler(404)
-def not_found(error):
-    return render_template('404.html'), 404
+        review = Reviews(
+            name=request.form['name'],
+            text=request.form['text']
+        )
+        db.session.add(review)
+        db.session.commit()
+    return redirect('/#Reviews')
 
 
 @app.route('/angiography-lower-extremities')
@@ -147,3 +183,8 @@ def angiopulmonography():
 def phlebography_seminal_vein():
     """Флебографія сім’яної select_reviews()вени"""
     return render_template('diagnostics/phlebography_seminal_vein.html')
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html'), 404
