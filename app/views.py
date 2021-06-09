@@ -1,6 +1,8 @@
 from .models import Reviews, User
 from app import db, app, login_manager
 
+import re
+
 from flask_admin import Admin, AdminIndexView, expose
 from flask_admin.contrib.sqla import ModelView
 from flask_login import login_required, login_user, current_user
@@ -9,6 +11,10 @@ from flask import (
     request,
     redirect
 )
+
+
+def validator(text):
+    return not bool(re.findall(r"[@><=#^&|/\\]|.com|http\S{1,}|\d{6,}|\d-\d|\+\d|\(\d{1,}\)", text))
 
 
 class MyAdminIndexView(AdminIndexView):
@@ -35,7 +41,7 @@ admin.add_view(MicroBlogModelView(Reviews, db.session))
 @app.route('/')
 def index():
     """Головна сторінка"""
-    return render_template('index.html', reviews=Reviews.query.all())
+    return render_template('index.html', reviews=Reviews.query.all(), error=False)
 
 
 @login_manager.user_loader
@@ -62,13 +68,17 @@ def login():
 def review():
     """Додавлення нового відгуку в БД"""
     if request.method == 'POST':
-        review = Reviews(
-            name=request.form['name'],
-            text=request.form['text']
-        )
-        db.session.add(review)
-        db.session.commit()
-    return redirect('/#Reviews')
+        name = request.form['name']
+        text = request.form['text']
+        if all([validator(name), validator(text)]):
+            review = Reviews(
+                name=name,
+                text=text
+            )
+            db.session.add(review)
+            db.session.commit()
+            return redirect('/#Reviews')
+    return render_template('index.html', reviews=Reviews.query.all(), error=True)
 
 
 @app.route('/angiography-lower-extremities')

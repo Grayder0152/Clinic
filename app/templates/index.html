@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<script type="text/javascript">
+    function show_form(){
+        document.getElementById('form_btn').style.display = "none";
+        document.getElementById('review_form').style.display = "flex";
+    }
+</script>
 <div class="main">
     <h1>Відділення ендоваскулярної хірургії</h1>
 </div>
@@ -280,21 +285,20 @@
     {% else %}
     <h3>Відгуків поки немає. Будьте першим, хто їх залишить!</h3>
     {% endif %}
-
     <button id="form_btn" onclick="show_form();">Залишити відгук</button>
-
     <form method="POST" action="{{ url_for('review')}} " id='review_form'>
         <input type="text" name="name" placeholder="Ім'я...">
         <textarea name="text" placeholder="Ваш відгук..."></textarea>
+        {% if error %}
+            <label id="name-error" class="error">*Введено недопустимі символи.</label>
+            <script>
+                show_form();
+            </script>
+        {% endif %}
         <input type="submit" value="Відправити">
-    </form>
-    <script type="text/javascript">
-        function show_form(){
-            document.getElementById('form_btn').style.display = "none";
-            document.getElementById('review_form').style.display = "flex";
-        }
 
-    </script>
+    </form>
+
 </section>
 <script type="text/javascript" src="{{ url_for('static', filename='js/tags.js') }}" defer></script>
 {% endblock %}

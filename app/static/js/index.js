@@ -25,21 +25,25 @@ $("#review_form").validate({
     rules: {
         name: {
             required: true,
-            minlength: 2
+            minlength: 2,
+            maxlength: 30
         },
         text: {
             required: true,
-            minlength: 15
+            minlength: 15,
+            maxlength: 100
         }
     },
     messages: {
         name: {
             required: "*Ви не ввели своє ім'я!",
-            minlength:"*Ім'я занадто коротке!"
+            minlength:"*Ім'я занадто коротке!",
+            maxlength:"*Макс. 30 символів!"
         },
         text: {
             required: "*Ви не ввели ваш відгук!",
-            minlength:"*Відгук повинен містити більше ніж 15 символів!"
+            minlength:"*Відгук повинен містити більше ніж 15 символів!",
+            maxlength:"*Макс. 100 символів!"
         }
     }
 });

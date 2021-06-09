@@ -4,5 +4,8 @@ DirectoryIndex app.py
 
 RewriteEngine On
 RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !/app.py
-RewriteRule ^(.*)$ /app.py/$1 [L]
+#RewriteCond %{REQUEST_FILENAME} !/app.py
+#RewriteRule ^(.*)$ /app.py/$1 [L]
+
+RewriteRule ^app\.py$ / [R=301,L]
+RewriteRule ^(.*)/app\.py$ /$1/ [R=301,L]
