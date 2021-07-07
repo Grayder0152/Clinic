@@ -1,6 +1,6 @@
 <header id="head" class="wrapper">
     <div>
-        <a href="{{ url_for('index') }}" class="link_logo">
+        <a href="{{ url_for('index')|remove_from_url }}" class="link_logo">
             <img src="{{ url_for('static', filename='images/logo_header.png') }}" class="logo">
             <span>Відділення інтервенційної<br>кардіології та малоінвазивної<br>хірургії</span>
         </a>
@@ -11,24 +11,24 @@
         </div>
     </div>
     <ul class="menu" id="menu">
-        <li><a href="{{ url_for('index') }}">Головна</a></li>
+        <li><a href="{{ url_for('index')|remove_from_url }}">Головна</a></li>
         <li>
             <span onclick="openNav('list_1')">Діагностика</span>
             <div id="list_1" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_1')">&times;</a>
                 <div>
-                    <a href="{{ url_for('coronary_ventriculography') }}">Коронаровентрикулографія</a>
-                    <a href="{{ url_for('cerebral_angiography') }}">Церебральна ангіографія</a>
-                    <a href="{{ url_for('aortography') }}">Аортографія</a>
-                    <a href="{{ url_for('arteriography_carotid_arteries') }}">Артеріографія сонних артерій</a>
-                    <a href="{{ url_for('arteriography_renal_arteries') }}">Артеріографія ниркових артерій</a>
-                    <a href="{{ url_for('arteriography_hepatic_artery') }}">Артеріографія печінкової артерії</a>
-                    <a href="{{ url_for('arteriography_splenic_artery') }}">Артеріографія селезінкової артерії</a>
-                    <a href="{{ url_for('arteriography_lower_and_upper_extremities') }}">Артеріографія нижніх і верхніх кінцівок </a>
-                    <a href="{{ url_for('pelvic_arteriography') }}">Тазова артеріографія</a>
-                    <a href="{{ url_for('phlebography_veins_extremities') }}">Флебографія вен кінцівок</a>
-                    <a href="{{ url_for('angiopulmonography') }}">Ангіопульмонографія</a>
-                    <a href="{{ url_for('phlebography_seminal_vein') }}">Флебографія сім’яної вени у чоловіків або яєчникової вени у жінок</a>
+                    <a href="{{ url_for('coronary_ventriculography')|remove_from_url }}">Коронаровентрикулографія</a>
+                    <a href="{{ url_for('cerebral_angiography')|remove_from_url }}">Церебральна ангіографія</a>
+                    <a href="{{ url_for('aortography')|remove_from_url }}">Аортографія</a>
+                    <a href="{{ url_for('arteriography_carotid_arteries')|remove_from_url }}">Артеріографія сонних артерій</a>
+                    <a href="{{ url_for('arteriography_renal_arteries')|remove_from_url }}">Артеріографія ниркових артерій</a>
+                    <a href="{{ url_for('arteriography_hepatic_artery')|remove_from_url }}">Артеріографія печінкової артерії</a>
+                    <a href="{{ url_for('arteriography_splenic_artery')|remove_from_url }}">Артеріографія селезінкової артерії</a>
+                    <a href="{{ url_for('arteriography_lower_and_upper_extremities')|remove_from_url }}">Артеріографія нижніх і верхніх кінцівок </a>
+                    <a href="{{ url_for('pelvic_arteriography')|remove_from_url }}">Тазова артеріографія</a>
+                    <a href="{{ url_for('phlebography_veins_extremities')|remove_from_url }}">Флебографія вен кінцівок</a>
+                    <a href="{{ url_for('angiopulmonography')|remove_from_url }}">Ангіопульмонографія</a>
+                    <a href="{{ url_for('phlebography_seminal_vein')|remove_from_url }}">Флебографія сім’яної вени у чоловіків або яєчникової вени у жінок</a>
                 </div>
             </div>
         </li>
@@ -37,18 +37,18 @@
           <div id="list_2" class="overlay">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav('list_2')">&times;</a>
               <div>
-                <a href="{{ url_for('angiography_lower_extremities') }}">Ангіографія нижніх кінцівок</a>
-                <a href="{{ url_for('ema') }}">Емболізація маткових артерій (ЕМА)</a>
-                <a href="{{ url_for('varicocele_embolization') }}">Емболізація варікоцеле</a>
-                <a href="{{ url_for('balloon_angioplasty_vessels') }}">Балонна ангіопластика судин</a>
-                <a href="{{ url_for('embolization_prostate_arteries') }}">Емболізація артерій простати</a>
-                <a href="{{ url_for('coronary_angiography_heart_pain') }}">Коронарографія при болях в серці</a>
-                <a href="{{ url_for('angiography_cerebral_vessels') }}">Ангіографія судин головного мозку</a>
+                <a href="{{ url_for('angiography_lower_extremities')|remove_from_url }}">Ангіографія нижніх кінцівок</a>
+                <a href="{{ url_for('ema')|remove_from_url }}">Емболізація маткових артерій (ЕМА)</a>
+                <a href="{{ url_for('varicocele_embolization')|remove_from_url }}">Емболізація варікоцеле</a>
+                <a href="{{ url_for('balloon_angioplasty_vessels')|remove_from_url }}">Балонна ангіопластика судин</a>
+                <a href="{{ url_for('embolization_prostate_arteries')|remove_from_url }}">Емболізація артерій простати</a>
+                <a href="{{ url_for('coronary_angiography_heart_pain')|remove_from_url }}">Коронарографія при болях в серці</a>
+                <a href="{{ url_for('angiography_cerebral_vessels')|remove_from_url }}">Ангіографія судин головного мозку</a>
               </div>
           </div>
         </li>
-        <li><a href="{{ url_for('index') }}#Doctors">Лікарі</a></li>
-        <li><a href="{{ url_for('index') }}#Reviews">Відгуки</a></li>
+        <li><a href="{{ url_for('index')|remove_from_url }}#Doctors">Лікарі</a></li>
+        <li><a href="{{ url_for('index')|remove_from_url }}#Reviews">Відгуки</a></li>
         <li><a href="#Contact">Контакти</a></li>
     </ul>
 </header>

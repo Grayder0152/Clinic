@@ -4,8 +4,8 @@ DirectoryIndex app.py
 
 RewriteEngine On
 RewriteBase /
-#RewriteCond %{REQUEST_FILENAME} !/app.py
-#RewriteRule ^(.*)$ /app.py/$1 [L]
 
-RewriteRule ^app\.py$ / [R=301,L]
-RewriteRule ^(.*)/app\.py$ /$1/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !/app.py
+RewriteRule ^(.*)$ /app.py/%{REQUEST_URI} [L]
+
+Header set Cache-Control "max-age=846000, public"

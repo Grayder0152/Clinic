@@ -13,7 +13,7 @@
 				<li>
 					<span class="arrow_top"></span>
 					<span class="arrow_bottom"></span>
-					<a href="{{ url_for('index') }}">Головна</a>
+					<a href="{{ url_for('index')|remove_from_url }}">Головна</a>
 				</li>
 				<li onclick="openNav('list_1')">
 					<span class="arrow_top"></span>
@@ -28,12 +28,12 @@
 				<li>
 					<span class="arrow_top"></span>
 					<span class="arrow_bottom"></span>
-					<a href="{{ url_for('index') }}#Doctors">Лікарі</a>
+					<a href="{{ url_for('index')|remove_from_url }}#Doctors">Лікарі</a>
 				</li>
 				<li>
 					<span class="arrow_top"></span>
 					<span class="arrow_bottom"></span>
-					<a href="{{ url_for('index') }}#Reviews">Відгуки</a>
+					<a href="{{ url_for('index')|remove_from_url }}#Reviews">Відгуки</a>
 				</li>
 			</ul>
 		</div>

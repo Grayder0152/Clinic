@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>{% block title %}Відділення інтервенційної кардіології та малоінвазивної хірургії{% endblock title %}</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords"
-          content="Відділення інтервенційної кардіології та малоінвазивної хірургії, Третя Черкаська міська лікарня, Ангіографія , інсульт , третя міська лікарня , діабетична стопа , ангіограф , артеріографія , Почечуєв ,Черкаси , медицина , операція , хірургія , рентген , варікоцеле , міома , фіброміома , аденома , ендоваскулярна хірургія , інтервенційна хірургія, мініінвазивна хірургія  , емболізація , коронарографія , обласна лікарня , перша лікарня , кардіоцентр , інфаркт">
-	<meta name="description" content="Третя Черкаська міська лікарня. Відділення інтервенційної кардіології та малоінвазивної хірургії">
-	<meta name="robots" content="index,follow">
-    <meta name="google-site-verification" content="QuwZUnHR2_jQ6PTbOyhmS-QAROyplaJ2Lf8EWKl5yGI" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>{% block title %}Clinic{% endblock title %}</title>
+          content="Відділення інтервенційної кардіології та малоінвазивної хірургії, Третя Черкаська міська лікарня, Ангіографія , інсульт , третя міська лікарня , діабетична стопа , ангіограф , артеріографія , Почечуєв ,Черкаси , медицина , операція , хірургія , рентген , варікоцеле , міома , фіброміома , аденома , ендоваскулярна хірургія , інтервенційна хірургія, мініінвазивна хірургія, емболізація , коронарографія , обласна лікарня , перша лікарня , кардіоцентр , інфаркт">
+    <meta name="description" content="{% block description %}{% endblock description %}">
+    <meta name="robots" content="index,follow">
+    <meta name="google-site-verification" content="QuwZUnHR2_jQ6PTbOyhmS-QAROyplaJ2Lf8EWKl5yGI"/>
+
     <link rel="shortcut icon" type="image/ico" href="{{ url_for('static', filename='images/icons/favicon.ico') }}"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css" media="all">
+
 </head>
 <body>
 {% include 'include/preloader.html' %}

@@ -13,6 +13,12 @@ from flask import (
 )
 
 
+@app.template_filter()
+def remove_from_url(path: str):
+    path = path.replace('/app.py', '')
+    return path
+
+
 def validator(text):
     return not bool(re.findall(r"[@><=#^&|/\\]|.com|http\S{1,}|\d{6,}|\d-\d|\+\d|\(\d{1,}\)", text))
 

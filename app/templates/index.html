@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}Відділення інтервенційної кардіології та малоінвазивної хірургії{% endblock title %}
+{% block description %}Третя Черкаська міська лікарня. Відділення інтервенційної кардіології та малоінвазивної хірургії{% endblock description %}
 {% block content %}
 <script type="text/javascript">
     function show_form(){
@@ -264,12 +266,13 @@
 </section>
 <section class="reviews_slider wrapper" id="Reviews">
     {% if reviews %}
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous" defer></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js" defer></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+
+    <link href="{{ url_for('static', filename='css/slick.min.css') }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" />
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js')|remove_from_url }}" type="text/javascript"  defer></script>
+    <script src="{{ url_for('static', filename='js/slick.min.js')|remove_from_url }}" type="text/javascript"  defer></script>
+    <script src="{{ url_for('static', filename='js/jquery.validate.min.js')|remove_from_url }}" type="text/javascript"  defer></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}" type="text/javascript"  defer></script>
+
     <h3>Відгуки</h3>
     <div class="slider">
         {% for review in reviews %}
@@ -296,9 +299,7 @@
             </script>
         {% endif %}
         <input type="submit" value="Відправити">
-
     </form>
-
 </section>
 <script type="text/javascript" src="{{ url_for('static', filename='js/tags.js') }}" defer></script>
 {% endblock %}

@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
         document.getElementById('top_btn').style.bottom = '-50px';
         document.getElementById('top_btn').style.opacity = '0';
     }
-});
+}, {passive: true});
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
